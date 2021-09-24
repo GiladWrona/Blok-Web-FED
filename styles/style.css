@@ -1,5 +1,71 @@
 /* CSS Document */
 *, *::after, *::before {
   box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica;
+  
+}
+
+header > ul:first-of-type {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  background-color: black;
+  font-size: 12px;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+header ul:first-of-type a{
+  color: aliceblue;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-right: 2em;
+}
+
+header nav{
+  color: aliceblue;
+  position: fixed;
+  height: 52px;
+  width: 100%;
+  background-color: black;
+}
+
+header nav > img:nth-of-type(1){
+  width: 225px;
+  height: 36.25px;
+  background-color: black;
+  position: absolute;
+  left: calc(50% - 225px / 2);
+  top: calc(50% - 36.25px / 2);
+}
+
+header nav a img{
+  height: 36.25px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 36.25px / 2);
+  right: 10px;
+
+}
+
+header nav ul{
+  background-color: rgb(54, 54, 54);
+  position: fixed;
+  top: 77.5px;
+  left: 0;
+  right: 20%;
+  bottom: 0;
+  transform:translateX(-100%);
+}
+
+ul.MenuUit{
+  transform:translateX(100%);
 }
 
