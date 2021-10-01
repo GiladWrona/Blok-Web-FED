@@ -7,10 +7,20 @@
 
 body {
   font-family: Helvetica;
-  
+  position: relative;
 }
 
-header > ul:first-of-type {
+header {
+  z-index: 10;
+}
+
+header section:nth-of-type(2){
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
+header section > ul:first-of-type {
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
@@ -30,7 +40,8 @@ header ul:first-of-type a{
 
 header nav{
   color: aliceblue;
-  position: fixed;
+  position: absolute;
+  z-index: 15;
   height: 52px;
   width: 100%;
   background-color: black;
@@ -45,7 +56,7 @@ header nav > img:nth-of-type(1){
   top: calc(50% - 36.25px / 2);
 }
 
-header nav a img{
+header nav button img{
   height: 36.25px;
   background-color: black;
   position: absolute;
@@ -57,15 +68,312 @@ header nav a img{
 
 header nav ul{
   background-color: rgb(54, 54, 54);
+  background-image: url(../images/bg-wool-dark.png);
   position: fixed;
   top: 77.5px;
   left: 0;
-  right: 20%;
+  right: 10%;
   bottom: 0;
   transform:translateX(-100%);
+  transition: 500ms;
+  list-style-type: none;
 }
 
 ul.MenuUit{
-  transform:translateX(100%);
+  transform: translateX(0);
 }
 
+header nav ul li{
+  padding: 9px 32px 9px 17px;
+  font-size: 16px;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0,0,0,.13);
+  border-right: solid 0;
+  font-weight: 700;
+  text-align: left;
+  height: 65px;
+  display: block;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+header section:nth-of-type(3){
+  background-image: url(../images/MC-Community_Hero_Alpine-1_1200x600.jpg);
+  justify-content: center;
+  text-align: center;
+  height: 600px;
+  background-position: center;
+  position: relative;
+}
+
+header section article{
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  bottom: 0;
+}
+
+h1{
+  font-size: 36px;
+  color:rgb(255, 255, 255);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 13px;
+}
+
+header section article p{
+  color: rgb(255, 255, 255);
+  font-family: 'Noto Sans' , sans-serif;
+}
+
+header section article p:first-of-type{
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
+header section article p:last-of-type{
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 50px;
+}
+
+
+/* Begin van de main */
+
+
+main{
+  position: relative;
+  background-color: #ececec;
+}
+
+main nav{
+  position: sticky;
+  top: 52px;
+  height: 76px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 4px solid rgba(0,0,0,.25);
+  z-index: 10;
+}
+
+main nav ul{
+  display: flex;
+  list-style-type: none;
+  overflow-x: scroll;
+  padding: 24px 12px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+main nav ul li a{
+  text-decoration: none;
+  color: #313131;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Noto Sans' , sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  overflow-x:auto;
+  padding: 8px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+
+main div:first-of-type{
+  background-image: url(../images/bg-wool-dark.png);
+  position: relative;
+  height: 75px;
+  margin-top: 100px;
+}
+
+main div img{
+  width: 100%;
+  position: absolute;
+  top: -100px;
+}
+
+#ForNewPlayers{
+  background-image: url(../images/bg-wool-dark.png);
+  width: 100%;
+}
+
+h2 {
+  font-family: 'Noto Sans' , sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#ForNewPlayers h2{
+  padding-top: 75px;
+  margin-bottom: 50px;
+}
+
+#ForNewPlayers ul{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#ForNewPlayers ul li{
+  margin-bottom: 50px;
+}
+
+#ForNewPlayers ul li section{
+  position:relative;
+}
+
+#ForNewPlayers ul li img{
+  width: 90%;
+  border: 2px solid #f1edec;
+}
+
+#ForNewPlayers button{
+  font-family: Helvetica;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  color: #1d1e1e;
+  background-color: #fff;
+  position: absolute;
+  left: calc(50% - 68.67px / 2);
+  bottom: -8px;
+}
+
+h3 a{
+  text-decoration: none;
+  font-family: "Noto Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+h3{
+  margin-top: 25px;
+}
+
+#ForNewPlayers p{
+  font-size: 15px;
+  color: white;
+  margin: 5px;
+  font-size: Helvetica;
+  letter-spacing: 0.5px;
+}
+
+#Youtube{
+  background-image: url(../images/bg-wool-white.png);
+  position: relative;
+  overflow-x: hidden;
+}
+
+#Youtube h2{
+  color: #202020;
+  letter-spacing: 1px;
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+#Youtube a{
+  display: flex;
+  justify-content: center;
+}
+
+#Youtube a img{
+  width: calc(100% - 28px);
+}
+
+#Youtube h2:last-of-type{
+  margin-bottom: 16px;
+}
+
+#Youtube p{
+  text-align: center;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 20px;
+  color: #202020;
+  line-height: 26px;
+}
+
+#Youtube button:last-of-type{
+  background-color: #008542;
+  padding: 10px 15px;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  color: white;
+  font-family: 'Noto Sans' , sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  border: none;
+  box-shadow: 0 -4px rgb(21 108 0 / 50%) inset, 0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset, 4px 0 rgb(21 108 0 / 50%) inset;
+  transition: 500ms;
+  position: absolute;
+  left: calc(50% - 272px / 2);
+}
+
+#Youtube button:last-of-type:hover{
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+  padding: 15px 30px;
+  left: calc(50% - 301.24px / 2);
+}
+
+#Youtube img:last-of-type{
+  margin-top: 150px;
+}
+
+
+#Creations{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#Creations h2{
+  color: #202020;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#Creations p{
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 20px;
+  color: #202020;
+  line-height: 26px;
+}
+
+#Creations ul{
+  list-style-type: none;
+}
+
+#Creations button{
+  font-family: Helvetica;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  color: #1d1e1e;
+  background-color: #fff;
+}

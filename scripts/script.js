@@ -1,5 +1,5 @@
 // JavaScript Document
-var menuKnop = document.querySelector("header nav a img");
+var menuKnop = document.querySelector("header nav button img");
 
 function hamburgerMenu() {
     var menu = document.querySelector("header nav ul");
